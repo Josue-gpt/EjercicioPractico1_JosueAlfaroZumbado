@@ -1,31 +1,63 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <body th:fragment="navbar">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" th:href="@{/}">Salón Belleza</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+
+    <!-- Logo / Nombre -->
+    <a class="navbar-brand fw-bold" th:href="@{/}">
+      <i class="fa-solid fa-spa"></i> Salón Belleza
+    </a>
+
+    <!-- Botón responsive -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="nav">
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
+
         <li class="nav-item">
-          <a class="nav-link" th:href="@{/}"><i class="fa-solid fa-house"></i> Inicio</a>
+          <a class="nav-link" th:href="@{/}">
+            <i class="fa-solid fa-house"></i> Inicio
+          </a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" th:href="@{/categorias}"><i class="fa-solid fa-list"></i> Categorías</a>
+          <a class="nav-link" th:href="@{/categorias}">
+            <i class="fa-solid fa-list"></i> Categorías
+          </a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" th:href="@{/servicios}"><i class="fa-solid fa-scissors"></i> Servicios</a>
+          <a class="nav-link" th:href="@{/servicios}">
+            <i class="fa-solid fa-scissors"></i> Servicios
+          </a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" th:href="@{/contacto}"><i class="fa-solid fa-envelope"></i> Contacto</a>
+          <a class="nav-link" th:href="@{/reservas}">
+            <i class="fa-solid fa-calendar-days"></i> Reservas
+          </a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/contacto}">
+            <i class="fa-solid fa-envelope"></i> Contacto
+          </a>
+        </li>
+
       </ul>
     </div>
+
   </div>
 </nav>
+
 </body>
 </html>
