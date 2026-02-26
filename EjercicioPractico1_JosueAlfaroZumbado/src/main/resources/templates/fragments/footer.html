@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body th:fragment="footer">
+<footer class="bg-light border-top mt-5 py-3">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="text-muted">
+      © <span th:text="${#dates.format(#dates.createNow(), 'yyyy')}">2026</span> Salón de Belleza
+    </div>
+    <div class="text-muted">
+      Quejas y sugerencias: <a th:href="@{/contacto}">Formulario</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

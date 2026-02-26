@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout('Categorías', ~{::contenido})}">
+
+<th:block th:fragment="contenido">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="mb-0">Categorías</h2>
+    <a class="btn btn-dark" th:href="@{/categorias/nuevo}">
+      <i class="fa-solid fa-plus"></i> Nueva
+    </a>
+  </div>
+
+  <div class="bg-white rounded shadow-sm p-3">
+    <table class="table table-hover align-middle mb-0">
+      <thead>
+        <tr>
+          <th style="width: 90px;">ID</th>
+          <th>Nombre</th>
+          <th style="width: 180px;">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="c : ${categorias}">
+          <td th:text="${c.id}">1</td>
+          <td th:text="${c.nombre}">Cabello</td>
+          <td>
+            <a class="btn btn-sm btn-outline-dark"
+               th:href="@{/categorias/editar/{id}(id=${c.id})}">
+              Editar
+            </a>
+            <a class="btn btn-sm btn-outline-danger"
+               th:href="@{/categorias/eliminar/{id}(id=${c.id})}"
+               onclick="return confirm('¿Eliminar categoría?');">
+              Eliminar
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</th:block>
+
+</html>

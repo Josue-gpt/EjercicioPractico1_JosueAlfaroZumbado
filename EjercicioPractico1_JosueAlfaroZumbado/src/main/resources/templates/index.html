@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout('Inicio | Salón de Belleza', ~{::contenido})}">
+
+<th:block th:fragment="contenido">
+  <div class="p-4 p-md-5 mb-4 bg-white rounded shadow-sm">
+    <div class="row align-items-center">
+      <div class="col-md-7">
+        <h1 class="display-6">Nuevo servicio destacado</h1>
+        <p class="lead mb-2">Tratamiento Capilar Premium. Brillo, hidratación y reparación en una sola sesión.</p>
+        <p class="text-muted mb-0">Reserva tu cita y aprovecha precio promocional por tiempo limitado.</p>
+      </div>
+      <div class="col-md-5">
+        <div class="ratio ratio-16x9 rounded overflow-hidden border">
+          <iframe src="https://www.youtube.com/embed/bcoDJ-NGvE4?si=sZH2fYNWwn6miFKH"
+                  title="Video promocional"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-3">
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0 h-100">
+        <div class="card-body">
+          <h5 class="card-title">Cabello</h5>
+          <p class="card-text text-muted">Cortes, color, tratamientos y asesoría.</p>
+          <a class="btn btn-dark" th:href="@{/servicios}">Ver servicios</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0 h-100">
+        <div class="card-body">
+          <h5 class="card-title">Uñas</h5>
+          <p class="card-text text-muted">Manicure, pedicure y spa.</p>
+          <a class="btn btn-dark" th:href="@{/servicios}">Ver servicios</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0 h-100">
+        <div class="card-body">
+          <h5 class="card-title">Spa</h5>
+          <p class="card-text text-muted">Relajación y bienestar.</p>
+          <a class="btn btn-dark" th:href="@{/contacto}">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</th:block>
+
+</html>

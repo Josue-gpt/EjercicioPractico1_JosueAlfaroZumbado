@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="layout(titulo, contenido)">
+<head th:replace="fragments/header :: header(${titulo})"></head>
+
+<body class="bg-light">
+  <div th:replace="fragments/navbar :: navbar"></div>
+
+  <main class="container my-4">
+    <div th:if="${mensaje}" class="alert alert-info" th:text="${mensaje}"></div>
+    <div th:replace="${contenido}"></div>
+  </main>
+
+  <div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
