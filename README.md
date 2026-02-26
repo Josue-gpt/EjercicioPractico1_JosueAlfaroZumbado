@@ -1,0 +1,2 @@
+# EjercicioPractico1_JosueAlfaroZumbado
+Caso1
